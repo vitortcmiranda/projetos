@@ -1,0 +1,9 @@
+5 – Explique os conceitos de cada item abaixo:
+
+
+? Procedures->sao blocos de comandos sql que utilizamos para concentrar codigos para podermos usar eles depois
+? Functions->E uma rotina que executa uma ação e sempre tem um retorno seja ele um valor ou uma tabela
+? Triggers-> É um tipo especial de procedure que é executado sempre que há uma tentativa de modificar dados de uma tabela que é protegida por ele
+? Views-> Uma view é uma tabela virtual baseada nos resultados de uma consulta SQL
+? Jobs-> É um script configurado para rodar de tempos em tempos.
+? Sequence-> Estruturas criadass no bd que retornam um valor diferente a cada acesso
