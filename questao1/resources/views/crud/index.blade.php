@@ -17,13 +17,22 @@
       @foreach($cruds as $post)
       <tr>
         <td>{{$post['nome']}}</td>
-        <td>{{$post['documentos']}}</td>
+        <td>
+          @for( $i= 0; $i<= ($post['documentos']); $i++)
+            <a href="" ><img src="#"></a>
+          
+          @endfor
+        </td>
         <td> {{$post['created_at']}}</td>
         <td> 
+
             @if($post['status'] =='Aguardando Documento'  )
-              <a class="btn btn-danger" style="font-size: 12px">{{$post['status']}} !</a>
-            @else
+
+              <a class="btn btn-warning" style="font-size: 12px">{{$post['status']}} !</a>
+            @elseif($post['status'] =='Aprovado com Sucesso'  )
               <a class="btn btn-success" style="font-size: 12px">{{$post['status']}} !</a>
+            @else 
+              <a class="btn btn-danger" style="font-size: 12px">{{$post['status']}} !</a>
             @endif
             </td>
         <td> {{$post['updated_at']}}</td>
@@ -31,6 +40,7 @@
         <td> 
 
           <form action="/crud/{{$post['id']}}" method="post">
+
            <input  type="submit" name="Aprovar" value="aprovar" class="btn btn-success">
         Ou 
 
